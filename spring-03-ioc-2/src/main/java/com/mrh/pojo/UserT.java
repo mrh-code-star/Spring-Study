@@ -5,6 +5,9 @@ import com.sun.jmx.snmp.SnmpString;
 public class UserT {
     private  String name;
 
+    public void show(){
+        System.out.println("name="+name);
+    }
     @Override
     public String toString() {
         return "User{" +

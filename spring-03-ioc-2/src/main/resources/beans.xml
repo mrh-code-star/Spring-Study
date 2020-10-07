@@ -3,8 +3,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
-
-    <bean id="User4" class="com.mrh.pojo.UserT">
+<!--id：bean的唯一标识符，相当于对象名
+    class：bean对象所对应的全限定名：包名+类型
+    name：相当于别名-->
+    <bean id="User4" class="com.mrh.pojo.UserT" name="UserT,user5">
 
     </bean>
     <bean id="User1" class="com.mrh.pojo.User">
@@ -16,5 +18,7 @@
     <bean id="User3" class="com.mrh.pojo.User">
         <constructor-arg name="name" value="马荣晖————直接通过参数名赋值"/>
     </bean>
+
+    <alias name="User1" alias="user-1"/>
 
 </beans>
