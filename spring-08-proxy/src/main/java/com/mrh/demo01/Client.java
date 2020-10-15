@@ -8,12 +8,10 @@ public class Client {
         Host host = new Host();
         host.rent();
     }
-//    代理
     @Test
     public void rentByProxy(){
         Host host = new Host();
         Proxy proxy = new Proxy(host);
-
         proxy.rent();
     }
 }
