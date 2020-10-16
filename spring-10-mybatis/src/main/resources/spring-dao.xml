@@ -24,9 +24,7 @@
 <!--        只能使用构造器方式注入SqlSessionFactory，因为它没有set方法-->
         <constructor-arg index="0" ref="sqlSessionFactory"/>
     </bean>
-    <bean id="userMapper" class="com.mrh.mapper.UserMapperImpl">
-        <property name="sqlSessionTemplate" ref="sqlSesion"/>
-    </bean>
+
 
 
 </beans>

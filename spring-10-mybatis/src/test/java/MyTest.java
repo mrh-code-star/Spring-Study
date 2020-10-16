@@ -32,19 +32,34 @@ public class MyTest {
 
 
     }
-    @Test
-    public void test(){
+        @Test
+        public void test(){
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring-dao.xml");
+            ApplicationContext context = new ClassPathXmlApplicationContext("spring-dao.xml");
 
-        UserMapper userMapper = context.getBean("userMapper", UserMapper.class);
+            UserMapper userMapper = context.getBean("userMapper", UserMapper.class);
 
-        List<User> users = userMapper.selectUser();
+            List<User> users = userMapper.selectUser();
 
-        for (User user : users) {
+            for (User user : users) {
 
-            System.out.println(user);
+                System.out.println(user);
+            }
+
         }
+        @Test
+        public void test2(){
 
-    }
+            ApplicationContext context = new ClassPathXmlApplicationContext("applicationContest.xml");
+
+            UserMapper userMapper = context.getBean("userMapper2", UserMapper.class);
+
+            List<User> users = userMapper.selectUser();
+
+            for (User user : users) {
+
+                System.out.println(user);
+            }
+
+        }
 }
